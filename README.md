@@ -1,8 +1,25 @@
+# Comment Boss
+Comment Boss is an Xcode Source Editor extension which lets you quickly reformat long comments to multiple lines.
+
+[![Demo Comment Boss](Docs/Comment Boss usage example.gif)](Docs/Comment%20Boss%20usage%20example.mp4?raw=true)
+
+
+
 ### To build
 
 * Select menu item Product > Archive.
 * In the Organizer window's Archives tab, select Export.
 * Choose Export as Developer-ID signed Application.
+
+### Installation
+* Copy the Comment Boss application to your Applications folder, or some other location on your drive.
+* Launch the Comment Boss application.
+* Open System Preferences and enable Comment Boss in the Extensions section.
+
+The Comment Boss extension should now appear at the bottom of Xcode’s Editor menu.
+
+### Usage
+In Xcode, place the cursor on a line containing a long code comment and invoke the Comment Boss > Reformat Comment to Multiple Lines extension from the Editor menu.
 
 
 ### Developed based on information from
