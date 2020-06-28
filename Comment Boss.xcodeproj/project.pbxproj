@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B60B88A1EC90350008BDDDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8891EC90350008BDDDE /* AppDelegate.swift */; };
+		3B60B88C1EC90350008BDDDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B88B1EC90350008BDDDE /* ViewController.swift */; };
+		3B60B88E1EC90350008BDDDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B60B88D1EC90350008BDDDE /* Assets.xcassets */; };
+		3B60B8911EC90350008BDDDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B60B88F1EC90350008BDDDE /* Main.storyboard */; };
+		3B60B89C1EC90350008BDDDE /* XcodeBossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B89B1EC90350008BDDDE /* XcodeBossTests.swift */; };
+		3B60B8A71EC90350008BDDDE /* XcodeBossUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8A61EC90350008BDDDE /* XcodeBossUITests.swift */; };
+		3B60B8BB1EC90371008BDDDE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B60B8BA1EC90371008BDDDE /* Cocoa.framework */; };
+		3B60B8C01EC90371008BDDDE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8BF1EC90371008BDDDE /* SourceEditorExtension.swift */; };
+		3B60B8C21EC90371008BDDDE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8C11EC90371008BDDDE /* SourceEditorCommand.swift */; };
+		3B60B8C61EC90371008BDDDE /* Comment Boss Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B60B8B81EC90371008BDDDE /* Comment Boss Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B60B8981EC90350008BDDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B60B87E1EC90350008BDDDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B60B8851EC90350008BDDDE;
+			remoteInfo = XcodeBoss;
+		};
+		3B60B8A31EC90350008BDDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B60B87E1EC90350008BDDDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B60B8851EC90350008BDDDE;
+			remoteInfo = XcodeBoss;
+		};
+		3B60B8C41EC90371008BDDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B60B87E1EC90350008BDDDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B60B8B71EC90371008BDDDE;
+			remoteInfo = "XcodeBoss Comments";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B60B8CA1EC90371008BDDDE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3B60B8C61EC90371008BDDDE /* Comment Boss Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B2D34771ED3CE0B00025C44 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		3B3905761ED21FFA00E53547 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B3905781ED23EA500E53547 /* Comment Boss.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Comment Boss.entitlements"; sourceTree = SOURCE_ROOT; };
+		3B60B8861EC90350008BDDDE /* Comment Boss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comment Boss.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60B8891EC90350008BDDDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B60B88B1EC90350008BDDDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B60B88D1EC90350008BDDDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B60B8901EC90350008BDDDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B60B8921EC90350008BDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B60B8971EC90350008BDDDE /* Comment BossTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Comment BossTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60B89B1EC90350008BDDDE /* XcodeBossTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBossTests.swift; sourceTree = "<group>"; };
+		3B60B89D1EC90350008BDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B60B8A21EC90350008BDDDE /* Comment BossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Comment BossUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60B8A61EC90350008BDDDE /* XcodeBossUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBossUITests.swift; sourceTree = "<group>"; };
+		3B60B8A81EC90350008BDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B60B8B81EC90371008BDDDE /* Comment Boss Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Comment Boss Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60B8BA1EC90371008BDDDE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B60B8BE1EC90371008BDDDE /* XcodeBoss_Comments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeBoss_Comments.entitlements; sourceTree = "<group>"; };
+		3B60B8BF1EC90371008BDDDE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		3B60B8C11EC90371008BDDDE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		3B60B8C31EC90371008BDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B60B8831EC90350008BDDDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8941EC90350008BDDDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B89F1EC90350008BDDDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8B51EC90371008BDDDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B8BB1EC90371008BDDDE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B60B87D1EC90350008BDDDE = {
+			isa = PBXGroup;
+			children = (
+				3B3905761ED21FFA00E53547 /* README.md */,
+				3B2D34771ED3CE0B00025C44 /* CHANGELOG.md */,
+				3B60B8881EC90350008BDDDE /* Comment Boss */,
+				3B60B8BC1EC90371008BDDDE /* Comment Boss Extension */,
+				3B60B89A1EC90350008BDDDE /* XcodeBossTests */,
+				3B60B8A51EC90350008BDDDE /* XcodeBossUITests */,
+				3B60B8B91EC90371008BDDDE /* Frameworks */,
+				3B60B8871EC90350008BDDDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B60B8871EC90350008BDDDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B8861EC90350008BDDDE /* Comment Boss.app */,
+				3B60B8971EC90350008BDDDE /* Comment BossTests.xctest */,
+				3B60B8A21EC90350008BDDDE /* Comment BossUITests.xctest */,
+				3B60B8B81EC90371008BDDDE /* Comment Boss Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B60B8881EC90350008BDDDE /* Comment Boss */ = {
+			isa = PBXGroup;
+			children = (
+				3B3905781ED23EA500E53547 /* Comment Boss.entitlements */,
+				3B60B8891EC90350008BDDDE /* AppDelegate.swift */,
+				3B60B88B1EC90350008BDDDE /* ViewController.swift */,
+				3B60B88D1EC90350008BDDDE /* Assets.xcassets */,
+				3B60B88F1EC90350008BDDDE /* Main.storyboard */,
+				3B60B8921EC90350008BDDDE /* Info.plist */,
+			);
+			name = "Comment Boss";
+			path = XcodeBoss;
+			sourceTree = "<group>";
+		};
+		3B60B89A1EC90350008BDDDE /* XcodeBossTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B89B1EC90350008BDDDE /* XcodeBossTests.swift */,
+				3B60B89D1EC90350008BDDDE /* Info.plist */,
+			);
+			path = XcodeBossTests;
+			sourceTree = "<group>";
+		};
+		3B60B8A51EC90350008BDDDE /* XcodeBossUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B8A61EC90350008BDDDE /* XcodeBossUITests.swift */,
+				3B60B8A81EC90350008BDDDE /* Info.plist */,
+			);
+			path = XcodeBossUITests;
+			sourceTree = "<group>";
+		};
+		3B60B8B91EC90371008BDDDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B8BA1EC90371008BDDDE /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B60B8BC1EC90371008BDDDE /* Comment Boss Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B8BF1EC90371008BDDDE /* SourceEditorExtension.swift */,
+				3B60B8C11EC90371008BDDDE /* SourceEditorCommand.swift */,
+				3B60B8C31EC90371008BDDDE /* Info.plist */,
+				3B60B8BD1EC90371008BDDDE /* Supporting Files */,
+			);
+			name = "Comment Boss Extension";
+			path = "XcodeBoss Comments";
+			sourceTree = "<group>";
+		};
+		3B60B8BD1EC90371008BDDDE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B60B8BE1EC90371008BDDDE /* XcodeBoss_Comments.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B60B8851EC90350008BDDDE /* Comment Boss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B60B8AB1EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment Boss" */;
+			buildPhases = (
+				3B60B8821EC90350008BDDDE /* Sources */,
+				3B60B8831EC90350008BDDDE /* Frameworks */,
+				3B60B8841EC90350008BDDDE /* Resources */,
+				3B60B8CA1EC90371008BDDDE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B60B8C51EC90371008BDDDE /* PBXTargetDependency */,
+			);
+			name = "Comment Boss";
+			productName = XcodeBoss;
+			productReference = 3B60B8861EC90350008BDDDE /* Comment Boss.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B60B8961EC90350008BDDDE /* Comment BossTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B60B8AE1EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment BossTests" */;
+			buildPhases = (
+				3B60B8931EC90350008BDDDE /* Sources */,
+				3B60B8941EC90350008BDDDE /* Frameworks */,
+				3B60B8951EC90350008BDDDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B60B8991EC90350008BDDDE /* PBXTargetDependency */,
+			);
+			name = "Comment BossTests";
+			productName = XcodeBossTests;
+			productReference = 3B60B8971EC90350008BDDDE /* Comment BossTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B60B8A11EC90350008BDDDE /* Comment BossUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B60B8B11EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment BossUITests" */;
+			buildPhases = (
+				3B60B89E1EC90350008BDDDE /* Sources */,
+				3B60B89F1EC90350008BDDDE /* Frameworks */,
+				3B60B8A01EC90350008BDDDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B60B8A41EC90350008BDDDE /* PBXTargetDependency */,
+			);
+			name = "Comment BossUITests";
+			productName = XcodeBossUITests;
+			productReference = 3B60B8A21EC90350008BDDDE /* Comment BossUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3B60B8B71EC90371008BDDDE /* Comment Boss Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B60B8C71EC90371008BDDDE /* Build configuration list for PBXNativeTarget "Comment Boss Extension" */;
+			buildPhases = (
+				3B60B8B41EC90371008BDDDE /* Sources */,
+				3B60B8B51EC90371008BDDDE /* Frameworks */,
+				3B60B8B61EC90371008BDDDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Comment Boss Extension";
+			productName = "XcodeBoss Comments";
+			productReference = 3B60B8B81EC90371008BDDDE /* Comment Boss Extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B60B87E1EC90350008BDDDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "The Evil Boss";
+				TargetAttributes = {
+					3B60B8851EC90350008BDDDE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4WC27B9WNL;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					3B60B8961EC90350008BDDDE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4WC27B9WNL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3B60B8851EC90350008BDDDE;
+					};
+					3B60B8A11EC90350008BDDDE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4WC27B9WNL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3B60B8851EC90350008BDDDE;
+					};
+					3B60B8B71EC90371008BDDDE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4WC27B9WNL;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3B60B8811EC90350008BDDDE /* Build configuration list for PBXProject "Comment Boss" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B60B87D1EC90350008BDDDE;
+			productRefGroup = 3B60B8871EC90350008BDDDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B60B8851EC90350008BDDDE /* Comment Boss */,
+				3B60B8961EC90350008BDDDE /* Comment BossTests */,
+				3B60B8A11EC90350008BDDDE /* Comment BossUITests */,
+				3B60B8B71EC90371008BDDDE /* Comment Boss Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B60B8841EC90350008BDDDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B88E1EC90350008BDDDE /* Assets.xcassets in Resources */,
+				3B60B8911EC90350008BDDDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8951EC90350008BDDDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8A01EC90350008BDDDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8B61EC90371008BDDDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B60B8821EC90350008BDDDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B88C1EC90350008BDDDE /* ViewController.swift in Sources */,
+				3B60B88A1EC90350008BDDDE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8931EC90350008BDDDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B89C1EC90350008BDDDE /* XcodeBossTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B89E1EC90350008BDDDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B8A71EC90350008BDDDE /* XcodeBossUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60B8B41EC90371008BDDDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60B8C01EC90371008BDDDE /* SourceEditorExtension.swift in Sources */,
+				3B60B8C21EC90371008BDDDE /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B60B8991EC90350008BDDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B60B8851EC90350008BDDDE /* Comment Boss */;
+			targetProxy = 3B60B8981EC90350008BDDDE /* PBXContainerItemProxy */;
+		};
+		3B60B8A41EC90350008BDDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B60B8851EC90350008BDDDE /* Comment Boss */;
+			targetProxy = 3B60B8A31EC90350008BDDDE /* PBXContainerItemProxy */;
+		};
+		3B60B8C51EC90371008BDDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B60B8B71EC90371008BDDDE /* Comment Boss Extension */;
+			targetProxy = 3B60B8C41EC90371008BDDDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B60B88F1EC90350008BDDDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B60B8901EC90350008BDDDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B60B8A91EC90350008BDDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B60B8AA1EC90350008BDDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		3B60B8AC1EC90350008BDDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Comment Boss.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBoss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.CommentBoss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B60B8AD1EC90350008BDDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Comment Boss.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBoss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.CommentBoss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3B60B8AF1EC90350008BDDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBossTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.XcodeBossTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Boss.app/Contents/MacOS/Comment Boss";
+			};
+			name = Debug;
+		};
+		3B60B8B01EC90350008BDDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBossTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.XcodeBossTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Boss.app/Contents/MacOS/Comment Boss";
+			};
+			name = Release;
+		};
+		3B60B8B21EC90350008BDDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBossUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.XcodeBossUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = XcodeBoss;
+			};
+			name = Debug;
+		};
+		3B60B8B31EC90350008BDDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = XcodeBossUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theevilboss.XcodeBossUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = XcodeBoss;
+			};
+			name = Release;
+		};
+		3B60B8C81EC90371008BDDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "XcodeBoss Comments/XcodeBoss_Comments.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = "XcodeBoss Comments/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theevilboss.CommentBoss-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B60B8C91EC90371008BDDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "XcodeBoss Comments/XcodeBoss_Comments.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WC27B9WNL;
+				INFOPLIST_FILE = "XcodeBoss Comments/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theevilboss.CommentBoss-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B60B8811EC90350008BDDDE /* Build configuration list for PBXProject "Comment Boss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60B8A91EC90350008BDDDE /* Debug */,
+				3B60B8AA1EC90350008BDDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B60B8AB1EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment Boss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60B8AC1EC90350008BDDDE /* Debug */,
+				3B60B8AD1EC90350008BDDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B60B8AE1EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment BossTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60B8AF1EC90350008BDDDE /* Debug */,
+				3B60B8B01EC90350008BDDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B60B8B11EC90350008BDDDE /* Build configuration list for PBXNativeTarget "Comment BossUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60B8B21EC90350008BDDDE /* Debug */,
+				3B60B8B31EC90350008BDDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B60B8C71EC90371008BDDDE /* Build configuration list for PBXNativeTarget "Comment Boss Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60B8C81EC90371008BDDDE /* Debug */,
+				3B60B8C91EC90371008BDDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B60B87E1EC90350008BDDDE /* Project object */;
+}
