@@ -111,15 +111,15 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 			tabReplacementSpaces.append(" ")
 		}
 		
-        for character in theLine.characters {
+        for character in theLine {
 
-			var newLineWithoutTabs = newLine.replacingOccurrences(of: "\t", with: tabReplacementSpaces)
-			let currentColumn = newLineWithoutTabs.characters.count
+			let newLineWithoutTabs = newLine.replacingOccurrences(of: "\t", with: tabReplacementSpaces)
+			let currentColumn = newLineWithoutTabs.count
 			
             if currentColumn > breakColumn {
 				
                 // Remove last word, unless only one word after the "// ".
-                let charactersToRemove: Int = lastWord.characters.count
+                let charactersToRemove: Int = lastWord.count
                 let lastWordRange =  newLine.index(newLine.endIndex, offsetBy: -charactersToRemove )..<newLine.endIndex
                 newLine.removeSubrange(lastWordRange)
                 
@@ -127,7 +127,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 if newLine != newLinePrefix {
                     
                     // Remove the ending characters, which is always a whitespace.
-                    newLine.characters.removeLast()
+                    newLine.removeLast()
                     newLines.add(newLine)
                 }
                 
@@ -201,7 +201,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 		
 		var commentStartIndex = 0;
 		var lastCharacter: Character = " "
-		for character in text.characters {
+		for character in text {
 			
 			if character == "/" && lastCharacter == "/" {
 				
