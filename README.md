@@ -1,7 +1,7 @@
 # Comment Boss
 Comment Boss is an Xcode Source Editor extension which lets you quickly reformat long comments to multiple lines.
 
-[![Demo Comment Boss](Docs/Comment Boss usage example.gif)](Docs/Comment%20Boss%20usage%20example.mp4?raw=true)
+[![Demo Comment Boss](Docs/Comment%20Boss%20usage%20example.gif)](Docs/Comment%20Boss%20usage%20example.mp4?raw=true)
 
 
 
@@ -28,15 +28,15 @@ In Xcode, place the cursor on a line containing a long code comment and invoke t
 https://developer.apple.com/videos/play/wwdc2016/414/
 
 ##### Extending Xcode 8 – Daniel Jalkut – 2016-10-08
-https://news.realm.io/news/jalkut-extending-xcode-8/
+https://academy.realm.io/posts/jalkut-extending-xcode-8/
 
-"You could take text in a document and send it to a webservice for automatic translation"
+> "You could take text in a document and send it to a webservice for automatic translation"
 
-"Maybe open a browser window based on the selected text"
+> "Maybe open a browser window based on the selected text"
 
-"Configuration and preferences should live in the App"
+> "Configuration and preferences should live in the App"
 
-Steps to get started:
+### Steps to get started developing an Xcode Source Editor extension
 
 1. Create a new Mac application
 2. Add a new extension target and accept Xcode's suggestion to Activate the scheme
@@ -44,9 +44,9 @@ Steps to get started:
 4. Select Xcode as the target to debug in
 (Debugging often fails the first time, try again and it will work)
 
-You must sign your app and extension or it won't show up!
+You must sign your app and extension or it won't show up.
 
-Tips:
+### Tips
 
 In the Scheme Editor (for the extension, not the app), under Run/Debug, change Executable from "Ask on Launch" to "Xcode".
 
