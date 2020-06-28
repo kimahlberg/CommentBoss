@@ -16,7 +16,7 @@ class ViewController: NSViewController {
 	let APP_GROUP_SUITE_NAME = "4WC27B9WNL.group.com.theevilboss.CommentBoss"
 	let LINE_LENGTH_KEY = "LINE_LENGTH"
 	
-	var lastKnownLineLength : Int = 80
+	var lastKnownLineLength : Int = 120
 
 	@IBOutlet weak var lineLengthSlider: NSSlider!
 	@IBOutlet weak var lineLengthTextField: NSTextField!

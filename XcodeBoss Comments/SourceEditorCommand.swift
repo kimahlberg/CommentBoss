@@ -173,7 +173,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 	/// Reads the preferred break column from the UserDefaults, or returns a sensible default.
 	func getPreferredBreakColumn() -> Int {
 		
-		var preferredBreakColumn = 80 // Default to 80 in case there is nothing stored in the UserDefaults.
+		var preferredBreakColumn = 120 // Default to 120 in case there is nothing stored in the UserDefaults.
 		
 		if let defaults : UserDefaults = UserDefaults.init(suiteName: APP_GROUP_SUITE_NAME) {
 			
