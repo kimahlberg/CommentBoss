@@ -27,6 +27,9 @@ In Xcode, place the cursor on a line containing a long code comment and invoke t
 ##### Using and Extending the Xcode Source Editor – WWDC'2016 session 414
 https://developer.apple.com/videos/play/wwdc2016/414/
 
+##### Creating a Source Editor Extension - Apple Developer Documentation
+https://developer.apple.com/documentation/xcodekit/creating_a_source_editor_extension
+
 ##### Extending Xcode 8 – Daniel Jalkut – 2016-10-08
 https://academy.realm.io/posts/jalkut-extending-xcode-8/
 
