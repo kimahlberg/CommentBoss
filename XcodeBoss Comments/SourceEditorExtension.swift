@@ -15,7 +15,9 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     func extensionDidFinishLaunching() {
          // If your extension needs to do any work at launch, implement this optional method.
         
-        NSLog("Extension did finish launching")
+        #if DEBUG
+            print("Extension did finish launching")
+        #endif
     }
  
     

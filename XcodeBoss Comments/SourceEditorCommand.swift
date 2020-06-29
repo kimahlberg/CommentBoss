@@ -11,19 +11,18 @@ import XcodeKit
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 	
-	let APP_GROUP_SUITE_NAME = "4WC27B9WNL.group.com.theevilboss.CommentBoss"
-	let LINE_LENGTH_KEY = "LINE_LENGTH"
-	
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 
-        // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
+        // Implement the command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
 
 		// Read the preferred line length/break column from persisted storage.
 		let preferredBreakColumn = self.getPreferredBreakColumn()
 		let minimumCommentLengthPerLine = 16
 
-		NSLog("Extension invoked w UTI '\(invocation.buffer.contentUTI)'. Preferred break column \(preferredBreakColumn).")
-
+        #if DEBUG
+            print("Extension invoked w UTI '\(invocation.buffer.contentUTI)'. Preferred break column \(preferredBreakColumn).")
+        #endif
+                
         // The invocation.buffer.selections array contains at least one XCSourceTextRange.
         // Break the line at the whitespace closest before the decided line length, adding spaces or tabs+spaces (as described in invocation parameter) to pad the next line before inserting "// ".
         // Use buffer.tabWidth, buffer.indentationWidth and buffer.usesTabsForIndendation.
@@ -42,7 +41,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             
             if selectionRange.end.line == selectionRange.start.line + 1 && selectionRange.end.column == 0 {
                 
-                NSLog("Note: Selection is not a single line, but second line has no charcters in selection so we go ahead anyway.")
+                #if DEBUG
+                    print("Note: Selection is not a single line, but second line has no charcters in selection so we go ahead anyway.")
+                #endif
             } else {
                 
                 completionHandler(nil) // Perhaps provide an Error?
@@ -53,19 +54,21 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         var lineIndex = selectionRange.start.line;
         let theLine:String = invocation.buffer.lines[lineIndex] as! String
-        NSLog("Line: %@", theLine)
-		
+        #if DEBUG
+            print("Line: %@", theLine)
+        #endif
 		
 		// Find the column index for where the first comment on the line starts.
-		let commentStartIndex = self.getCommentStartColumnIndex(for: theLine, tabWidth: invocation.buffer.tabWidth)
-		if commentStartIndex == -1 {
-			
+        guard let commentStartIndex = self.getCommentStartColumnIndex(for: theLine, tabWidth: invocation.buffer.tabWidth) else {
+					
 			completionHandler(nil) // Perhaps provide an Error?
 			NSLog("Exited: Line doesn't contain a code comment.")
 			return;
 		}
 		
-		print("First comment at Index \(commentStartIndex)")
+        #if DEBUG
+            print("First comment at Index \(commentStartIndex)")
+        #endif
 		
 		let commentLinePrefix = self.getCommentPrefix(for: theLine)
 		
@@ -75,8 +78,10 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             
             breakColumn = commentStartIndex + minimumCommentLengthPerLine
         }
-        print("Adapted break column: \(breakColumn).")
-        
+        #if DEBUG
+            print("Adapted break column: \(breakColumn).")
+        #endif
+
         // Create the prefix, with sufficient whitespace and then "// " or "/// ".
         var newLinePrefix = ""
 
@@ -149,7 +154,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             newLines.add(newLine) // Store the final new line to the array.
         }
         
-        print("All new lines: \(newLines)")
+        #if DEBUG
+            print("All new lines: \(newLines)")
+        #endif
         
         // Remove the original line...
         invocation.buffer.lines.removeObject(at: lineIndex)
@@ -192,11 +199,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 	}
 	
 	/// Returns the column index of the start of the first comment in the text, or nil if no comment found.
-	func getCommentStartColumnIndex(for text : String, tabWidth : Int) -> Int {
+	func getCommentStartColumnIndex(for text : String, tabWidth : Int) -> Int? {
 		
 		if !text.contains("//") {
 			
-			return -1 // The text doesn't contain a comment.
+			return nil // The text doesn't contain a comment.
 		}
 		
 		var commentStartIndex = 0;

@@ -17,6 +17,8 @@
 		3B60B8C01EC90371008BDDDE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8BF1EC90371008BDDDE /* SourceEditorExtension.swift */; };
 		3B60B8C21EC90371008BDDDE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B8C11EC90371008BDDDE /* SourceEditorCommand.swift */; };
 		3B60B8C61EC90371008BDDDE /* Comment Boss Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B60B8B81EC90371008BDDDE /* Comment Boss Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BDCACFB24A97CB300CF5632 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCACF824A96FE100CF5632 /* Constants.swift */; };
+		3BDCACFC24A97CBE00CF5632 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCACF824A96FE100CF5632 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		3B60B8BF1EC90371008BDDDE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		3B60B8C11EC90371008BDDDE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		3B60B8C31EC90371008BDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDCACF824A96FE100CF5632 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 				3B2D34771ED3CE0B00025C44 /* CHANGELOG.md */,
 				3B60B8881EC90350008BDDDE /* Comment Boss */,
 				3B60B8BC1EC90371008BDDDE /* Comment Boss Extension */,
+				3BDCACF724A96FA900CF5632 /* Shared Files */,
 				3B60B89A1EC90350008BDDDE /* XcodeBossTests */,
 				3B60B8A51EC90350008BDDDE /* XcodeBossUITests */,
 				3B60B8B91EC90371008BDDDE /* Frameworks */,
@@ -197,6 +201,14 @@
 				3B60B8BE1EC90371008BDDDE /* XcodeBoss_Comments.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BDCACF724A96FA900CF5632 /* Shared Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCACF824A96FE100CF5632 /* Constants.swift */,
+			);
+			path = "Shared Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +394,7 @@
 			files = (
 				3B60B88C1EC90350008BDDDE /* ViewController.swift in Sources */,
 				3B60B88A1EC90350008BDDDE /* AppDelegate.swift in Sources */,
+				3BDCACFB24A97CB300CF5632 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +420,7 @@
 			files = (
 				3B60B8C01EC90371008BDDDE /* SourceEditorExtension.swift in Sources */,
 				3B60B8C21EC90371008BDDDE /* SourceEditorCommand.swift in Sources */,
+				3BDCACFC24A97CBE00CF5632 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
