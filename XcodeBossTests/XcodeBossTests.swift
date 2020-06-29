@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import XcodeBoss
+@testable import Comment_Boss
 
 class XcodeBossTests: XCTestCase {
     
