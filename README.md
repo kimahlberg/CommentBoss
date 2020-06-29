@@ -39,6 +39,9 @@ https://academy.realm.io/posts/jalkut-extending-xcode-8/
 
 > "Configuration and preferences should live in the App"
 
+##### Xcode​Kit and Xcode Source Editor Extensions - NSHipster
+https://nshipster.com/xcode-source-extensions/
+
 ### Steps to get started developing an Xcode Source Editor extension
 
 1. Create a new Mac application
